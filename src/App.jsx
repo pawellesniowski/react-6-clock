@@ -21,6 +21,10 @@ class App extends Component {
         }, 1000);
     };
 
+    componentWillUnmount(){
+        clearInterval(this.intervalSet);
+    }
+
     addZero = num => num<10? "0"+num : num;
     
     render(){
